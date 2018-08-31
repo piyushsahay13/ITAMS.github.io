@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ITAM-Index</title>
+    <link href="Css/Style.css" rel="stylesheet" />
+    <script src="Script1.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+            $("#flip2").click(function () {
+                $("#panel2").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body onload="carousel()">
+    <header>
+        <div class="container">
+            <img src="Images/logo.png" class="logo"/>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Application.aspx">Add Asset</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="pannel">
+                <h1 class="heading">Welcome to IT Asset Management System</h1>
+            </div>
+            <div class="content">
+                <img src="Images/FireShot Capture 15 - ITAMS-NTPC - http___localhost_50995_Application.png" class="mySlides" />
+                <img src="Images/FireShot Capture 16 - Employee Search - http___localhost_50995_Search.png" class="mySlides" />
+                <img src="Images/FireShot Capture 17 - Employee Search - http___localhost_50995_Search.png" class="mySlides" />
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 4000); 
+                }
+            </script>
+            <div id="flip1" style="    text-align: justify;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #555;
+            border: solid 1px #c3c3c3;
+            color: white;
+            text-decoration: underline;
+            font-size:20px;">
+                About
+            </div>
+            <div id="panel1" style="    text-align: justify;
+                    line-height: 23px;
+                    margin: auto;
+                    padding: 10px;
+                    background: rgb(85, 85, 85);
+                    border: 1px solid rgb(102, 102, 102);
+                    color: rgb(255, 255, 255);
+                    border-radius: 3px;
+                    user-select: none;">
+                IT asset management (ITAM) is the set of business practices that join financial, contractual and inventory functions to support life cycle management and strategic decision making for the IT environment. Assets include all elements of software and hardware that are found in the business environment.
+                IT asset management (also called IT inventory management) is an important part of an organization's strategy. It usually involves gathering detailed hardware and software inventory information which is then used to make decisions about hardware and software purchases and redistribution. IT inventory management helps organizations manage their systems more effectively and saves time and money by avoiding unnecessary asset purchases and promoting the harvesting of existing resources. Organizations that develop and maintain an effective IT asset management program further minimize the incremental risks and related costs of advancing IT portfolio infrastructure projects based on old, incomplete and/or less accurate information.
+            </div>
+            <div id="flip" style="    text-align: justify;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                padding: 10px;
+                background-color: #555;
+                border: solid 1px #c3c3c3;
+                color: white;
+                text-decoration: underline;
+                font-size:20px;">Hardware Asset Management</div>
+            <div id="panel" style="    text-align: justify;
+            line-height: 23px;
+            margin: auto;
+            padding: 10px;
+            background: rgb(85, 85, 85);
+            border: 1px solid rgb(102, 102, 102);
+            color: rgb(255, 255, 255);
+            border-radius: 3px;
+            user-select: none;
+            display: none">
+
+                Hardware asset management entails the management of the physical components of computers and computer networks, from acquisition through disposal. Common business practices include request and approval process, procurement management, life cycle management, redeployment and disposal management. A key component is capturing the financial information about the hardware life cycle which aids the organization in making business decisions based on meaningful and measurable financial objectives.
+
+                Software Asset Management is a similar process, focusing on software assets, including licenses, versions and installed endpoints.
+
+            </div>
+            <div id="flip2" style="    text-align: justify;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #555;
+            border: solid 1px #c3c3c3;
+            color: white;
+            text-decoration: underline;
+            font-size:20px;">
+                Role of IT asset management in an organization
+            </div>
+            <div id="panel2" style="    text-align: justify;
+            line-height: 23px;
+            margin: auto;
+            padding: 10px;
+            background: rgb(85, 85, 85);
+            border: 1px solid rgb(102, 102, 102);
+            color: rgb(255, 255, 255);
+            border-radius: 3px;
+            user-select: none;
+            display: none;">
+                The IT Asset Management function is the primary point of accountability for the life-cycle management of information technology assets throughout the organization.
+
+                Included in this responsibility are development and maintenance of policies, standards, processes, systems and measurements that enable the organization to manage the IT Asset Portfolio with respect to risk, cost, control, IT Governance, compliance and business performance objectives as established by the business.
+
+                IT Asset Management uses integrated software solutions that work with all departments that are involved in the procurement, deployment, management and expense reporting of IT assets.
+            </div>
+        </div>
+</main>
+    <footer></footer>
+</body>
+</html>
